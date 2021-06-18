@@ -21,10 +21,11 @@ def get_match_by_id(match_id):
         file.close()
 
 # starting match_id
-match_id = 5915008308
+#match_id = 5915008308
 
-# match id to build 1000 matches, not all match_ids played
-# match_id_end = 5915010226
+# current number of unique match_ids = 4797
+# current match_id to add more matches, not every match_id played
+match_id = 5915017435
 
 # fetch 1000 matches
 for i in range(1, 1000):
