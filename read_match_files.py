@@ -49,13 +49,7 @@ db = pd.DataFrame(db, columns = ['match_id', 'hero_id', 'win'])
 
 # keep heroes with at least 50 samples
 count = db.hero_id.value_counts()
-# with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-#     print(count)
-
 keep = count[count > 50].index
-
-#with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-#     print(count[count>25].index)
 db = db[db.hero_id.isin(keep)]
 
 
@@ -96,6 +90,6 @@ ax1.set_ylabel('winrate')
 ax1.set_title('Top/Bottom 10 winrate for last picks - ')
 ax1.axhline(y = 50, linestyle = '--', color='red')
 
-#plt.bar(id2name(top10.index), top10)
+# plt.bar(id2name(top10.index), top10)
 
 plt.show()
